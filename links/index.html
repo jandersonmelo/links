@@ -1,135 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Blacknous Assessoria Contábil</title>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-      <style>
-        html, body {
-          margin: 0;
-          padding: 0;
-          height: 100%;
-          font-family: 'Inter', Arial, sans-serif;
-          background: linear-gradient(135deg, #020b14, #0a1a2a);
-          color: #fff;
-          animation: fadeIn 1s ease-in;
-        }
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        body {
-          display: flex;
-          flex-direction: column;
-        }
-        .container {
-          max-width: 400px;
-          margin: auto;
-          padding: 20px;
-          flex: 1;
-        }
-        .profile {
-          text-align: center;
-          padding: 20px;
-        }
-        .avatar {
-          width: 100px;
-          height: 100px;
-          border-radius: 50%;
-          object-fit: cover;
-          border: 2px solid rgba(255, 255, 255, 0.3);
-          background-color: rgba(255, 255, 255, 0.1);
-          backdrop-filter: blur(5px);
-        }
-        h1 {
-          margin: 10px 0 5px;
-          font-size: 1.6em;
-        }
-        p {
-          font-size: 0.95em;
-          color: #d0d0d0;
-        }
-        .links {
-          margin-top: 20px;
-        }
-        .link-item {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background: rgba(255, 255, 255, 0.08);
-          backdrop-filter: blur(10px);
-          padding: 12px;
-          border-radius: 12px;
-          margin-bottom: 12px;
-          cursor: pointer;
-          transition: background 0.3s, transform 0.2s;
-          border: 1px solid rgba(255, 255, 255, 0.15);
-          text-decoration: none;
-          color: white;
-        }
-        .link-item:hover {
-          background: rgba(255, 255, 255, 0.18);
-          transform: translateY(-2px);
-        }
-        .arrow {
-          color: #fff;
-          font-size: 1.2em;
-        }
-        footer {
-          width: 100%;
-          text-align: center;
-          padding: 15px 10px;
-          font-size: 0.85em;
-          color: #ccc;
-          background: rgba(255, 255, 255, 0.05);
-          backdrop-filter: blur(5px);
-          border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        footer .cnpj {
-          margin-top: 5px;
-          font-size: 0.8em;
-        }
-        @media (max-width: 480px) {
-          .container {
-            padding: 10px;
-          }
-          .link-item {
-            font-size: 0.9em;
-            padding: 10px;
-          }
-        }
-      </style>
-    </head>
-    <body>
-      <div class="container">
-        <div class="profile">
-          <img src="B_.png" alt="Foto de perfil" class="avatar" />
-          <h1>Blacknous</h1>
-          <p>Assessoria Contábil</p>
-          <p>Assessoria Contábil para Micro e Pequenas Empresas</p>
-        </div>
-        <div class="links">
-          <a href="https://wa.me/5591984938236?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os%20de%20contabilidade!" class="link-item">
-            <span>📞 Contato via WhatsApp</span>
-            <span class="arrow">›</span>
-          </a>
-          <a href="https://drive.google.com/file/d/1PDQHCx2fAyhowUiAOlkOFHRpH1EHfW66/view?usp=drive_link" class="link-item">
-            <span>🌍 eBook Manual do MEI</span>
-            <span class="arrow">›</span>
-          </a>
-          <a href="http://www.blacknous.com/vsl" class="link-item">
-            <span>🚨 Seu CNPJ está correndo risco</span>
-            <span class="arrow">›</span>
-          </a>
-        </div>
-      </div>
-      <footer>
-        <p>© <span id="ano"></span> Blacknous | Todos os direitos reservados</p>
-        <p class="cnpj">CNPJ: 00.000.000/0001-90</p>
-      </footer>
-      <script>
-        document.getElementById("ano").textContent = new Date().getFullYear();
-      </script>
-    </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blacknous Assessoria Contábil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden; /* 🔒 Impede rolagem lateral */
+      font-family: 'Inter', Arial, sans-serif;
+      background: linear-gradient(135deg, #020b14, #0a1a2a);
+      color: #fff;
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      max-width: 400px;
+      width: 100%;
+      margin: auto;
+      padding: 20px;
+      box-sizing: border-box;
+      flex: 1;
+    }
+    .profile {
+      text-align: center;
+      padding: 20px;
+    }
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+    }
+    h1 {
+      margin: 10px 0 5px;
+      font-size: 1.6em;
+    }
+    p {
+      font-size: 0.95em;
+      color: #d0d0d0;
+    }
+    .links {
+      margin-top: 20px;
+    }
+    .link-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 12px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      text-decoration: none;
+      color: white;
+      box-sizing: border-box;
+    }
+    .link-item:hover {
+      background: rgba(255, 255, 255, 0.18);
+      transform: translateY(-2px);
+    }
+    .arrow {
+      color: #fff;
+      font-size: 1.2em;
+    }
+    footer {
+      width: 100%;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.85em;
+      color: #ccc;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(5px);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    footer .cnpj {
+      margin-top: 5px;
+      font-size: 0.8em;
+    }
+    @media (max-width: 480px) {
+      .container {
+        padding: 10px;
+      }
+      .link-item {
+        font-size: 0.9em;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile">
+      <img src="B_.png" alt="Foto de perfil" class="avatar" />
+      <h1>Blacknous</h1>
+      <p>Assessoria Contábil</p>
+      <p>Assessoria Contábil para Micro e Pequenas Empresas</p>
+    </div>
+    <div class="links">
+      <a href="https://wa.me/5591984938236?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os%20de%20contabilidade!" class="link-item">
+        <span>📞 Contato via WhatsApp</span>
+        <span class="arrow">›</span>
+      </a>
+      <a href="https://drive.google.com/file/d/1PDQHCx2fAyhowUiAOlkOFHRpH1EHfW66/view?usp=drive_link" class="link-item">
+        <span>🌍 eBook Manual do MEI</span>
+        <span class="arrow">›</span>
+      </a>
+      <a href="http://www.blacknous.com/vsl" class="link-item">
+        <span>🚨 Seu CNPJ está correndo risco</span>
+        <span class="arrow">›</span>
+      </a>
+    </div>
+  </div>
+  <footer>
+    <p>© <span id="ano"></span> Blacknous | Todos os direitos reservados</p>
+    <p class="cnpj">CNPJ: 00.000.000/0001-90</p>
+  </footer>
+  <script>
+    document.getElementById("ano").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
